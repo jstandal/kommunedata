@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="nav.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">KOMMUNEDATA:</h1>
+      <nav>
+        <ul>
+          <li onclick="buttonIntroduction()"><a href="#">Introduksjon</a></li>
+          <li onclick="buttonOverview()"><a href="#">Oversikt</a></li>
+          <li onclick="buttonDetails()"><a href="#">Detaljer</a></li>
+          <li onclick="buttonCompare()"><a href="#">Sammenligning</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="introduksjon" class="shown">
+        <p>
+          Denne nettsiden er et verktøy for å vise data om Norges befolkning, og er en del av pensum i emnet <a href="https://www.uib.no/emne/INFO134" target="_blank">
+          klientprogrammering</a> ved Universitet i Bergen. <br><br><br>Nettsiden henter tre datasett fra Statistisk sentralbyrå om befolkning, sysselsetting og utdanning (data kan inneholde feil).
+          For mer informasjon se <a href="https://www.ssb.no" target="_blank"https://www.ssb.no.> https://www.ssb.no</a>.
+        </p>
+      </div>
+
+      <div id="oversikt" class="hidden">
+        <table>
+          <thead>
+            <th>Kommune</th>
+            <th>Kommunenr</th>
+            <th>Befolkningstall</th>
+            <th>Økning</th>
+          </thead>
+          <tbody id="fulldata">
+          </tbody>
+        </table>
+      </div>
+
+      <div id="detaljer" class="hidden">
+        <div>
+          <p class="intro">Skriv inn et kommunenummer for å få detaljert informasjon om kommunenes befolkning, sysselsetting og utdanning</p>
+        </div>
+        <div>
+          <input id="search" type="text" name="" value="" placeholder="Kommunenummer..">
+          <button onclick="manageDetailsData(document.getElementById('search').value)">SØK</button>
+        </div>
+        <div id="tableDetails"></div>
+        <div id="populationInfo"></div>
+        <div id="employmentInfo"></div>
+        <div id="educationInfo"></div>
+      </div>
+
+      <div id="sammenligning" class="hidden">
+        <div>
+          <p class="intro">Skriv inn to kommunenummer for å sammenligne utdanningsdata</p>
+        </div>
+        <div>
+          <input id="kom1input" type="text" name="Kommune1" value="" placeholder="Kommunenummer..">
+          <input id="kom2input" type="text" name="Kommune2" value="" placeholder="Kommunenummer..">
+          <button onclick="compareEducation(document.getElementById('kom1input').value, document.getElementById('kom2input').value)">Sammenlign</button>
+        </div>
+        <div>
+          <table id="educationTable">
+          </table>
+        </div>
+        <div>
+          <p id="highestscore"></p>
+        </div>
+      </div>
+    </main>
+
+
+    <footer>
+      <p>Dette er en oppgavebesvarelse i emnet INFO134. Data er hentet fra Statistisk Sentralbyrå og kan inneholde feil.</p>
+    </footer>
+  </body>
+
+</html>

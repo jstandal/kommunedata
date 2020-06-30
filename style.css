@@ -1,0 +1,292 @@
+@media screen and (max-width: 1030px){
+  .tabledata {
+  border: 0;
+  }
+
+  .tabledata thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .tabledata tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .tabledata td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 15px;
+    text-align: right;
+  }
+
+  .tabledata td::before {
+    float: left;
+    font-weight: bold;
+  }
+
+  .tabledata td:last-child {
+    border-bottom: 0;
+  }
+
+  .tabledata td:first-child {
+    font-weight: bolder;
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .tabledata td:nth-of-type(1):before { content: ""; }
+	.tabledata td:nth-of-type(2):before { content: "2007"; }
+	.tabledata td:nth-of-type(3):before { content: "2008"; }
+	.tabledata td:nth-of-type(4):before { content: "2009"; }
+	.tabledata td:nth-of-type(5):before { content: "2010"; }
+	.tabledata td:nth-of-type(6):before { content: "2011"; }
+	.tabledata td:nth-of-type(7):before { content: "2012"; }
+	.tabledata td:nth-of-type(8):before { content: "2013"; }
+	.tabledata td:nth-of-type(9):before { content: "2014"; }
+	.tabledata td:nth-of-type(10):before { content: "2015"; }
+  .tabledata td:nth-of-type(11):before { content: "2016"; }
+  .tabledata td:nth-of-type(12):before { content: "2017"; }
+}
+
+@media screen and (max-width: 640px){
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+body{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #ededed;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+
+header, main, footer {
+  flex-shrink: 0;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+input{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border: 1px solid;
+  padding: 5px 10px;
+  margin: 5px;
+  height: 2em;
+}
+
+button{
+  font-family: sans-serif;
+  height: 2em;
+  padding: 5px 20px;
+  margin: 5px;
+  background-color: #dfdfdf;
+  border: 1px solid;
+}
+
+button:hover{
+  background-color: #ababab;
+  cursor: pointer;
+}
+
+footer {
+  height:70px;
+  display: flex;
+  justify-content: center;
+  background-color: #333333;
+  color: #ffffff;
+  font-family: sans-serif;
+  bottom: 0;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 30px;
+  color: #2e2e2e;
+  font-family: sans-serif;
+
+}
+
+h3 {
+  padding: 10px;
+  font-family: sans-serif;
+  background-color: #6e7fed;
+  color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+li {
+  display: flex;
+  font-family: sans-serif;
+  padding: 8px 16px;
+  margin: auto;
+}
+
+li a {
+  text-decoration: none;
+  color: #676767;
+}
+
+li a:hover{
+  color: #71bdf4;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: Helvetica, sans-serif;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+th {
+  background-color: #6e7fed;;
+  position: sticky;
+  color: #ffffff;
+  top: 0;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#logo {
+  float: left;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: auto;
+  margin-left: 40px;
+  font-weight: 700;
+  color: #6e7fed;
+}
+
+#introduksjon {
+  text-align: left;
+  font-family: sans-serif;
+  height: 13em;
+  padding: 5em;
+  font-size: 1.6em;
+  border-radius: 15px;
+}
+
+#oversikt {
+  margin: auto;
+  width: 95%;
+}
+
+#detaljer {
+  margin: auto;
+  flex-direction: column;
+  width: 95%;
+}
+
+#sammenligning {
+  margin: auto;
+  flex-direction: column;
+  font-family: sans-serif;
+  width: 95%;
+}
+
+#educationTable{
+  margin: auto;
+}
+
+#educationInfo,
+#employmentInfo,
+#populationInfo {
+  flex-direction: column;
+}
+
+#educationInfo th,
+#employmentInfo th,
+#populationInfo th{
+  background-color: #f2f2f2;
+  color: #2e2e2e;
+}
+
+#educationInfo table {
+  margin-bottom: 10px;
+}
+
+#highestscore{
+    font-size: 2em;
+    text-align: center;
+}
+
+.intro {
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: flex;
+}
